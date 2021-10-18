@@ -1,0 +1,15 @@
+<aside id="sidebar">
+
+    <header>
+        <h1>Special pick</h1>
+    </header>
+
+        <div id="book-container">
+            <a href="{{ daily_pick_book.url }}" >
+                <img src={{ daily_pick_book.image_url }} class="img-small">
+            </a>
+            <div id="book-description">
+                <p>{{ daily_pick_book.title }}, ({{ daily_pick_book.release_year }}).</p>
+            </div>
+        </div>
+</aside>

@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<main id="main">
+    {% for book in books %}
+    <article id="book">
+        <h2>{{book.title}} ({{ book.release_year }})</h2>
+        <br>
+        <table>
+        <tr>
+            <td>Authors:</td>
+            {% for author in book.authors %}
+            <td><a class="link" href="{{ url_for('books_bp.browse_author', author=author.unique_id)}}">{{author.full_name}}</a></td>
+            {% endfor %}
+        </tr>
+        </table>
+        <p>{{book.description}}</p>
+        <br>
+        <table>
+        <tr>
+            <td>Average Rating: {{book.average_rating}}</td>
+            <td>Publisher: {{book.publisher.name}}</td>
+        </tr>
+
+        </table>
+    </article>
+    {% endfor %}
+</main>
+{% endblock %}

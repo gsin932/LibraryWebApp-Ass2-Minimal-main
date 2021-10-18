@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytest = "*"
+python-dotenv = "==0.19.0"
+better-profanity = "==0.7.0"
+password-validator = "==1.0"
+Flask = "==1.1.4"
+Flask-WTF = "==0.15.0"
+flask-sqlalchemy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

@@ -1,0 +1,23 @@
+<nav id="nav">
+
+
+  <h2 id="nav-header">
+    {% if 'user_name' in session %} Hello, {{ session['user_name'] }} {%
+    endif %}
+  </h2>
+  <a class="btn-nav" href="{{ url_for('home_bp.home') }}">Home</a>
+  <a class="btn-nav" href="{{ url_for('authentication_bp.register') }}">Register</a>
+  <a class="btn-nav" href="{{ url_for('authentication_bp.login') }}">Login</a>
+  <a class="btn-nav" href="{{ url_for('authentication_bp.logout') }}">Logout</a>
+
+  <div>
+    <h3 id="sub-nav-header">Browse by </h3>
+    <a class="btn-nav" href="{{ url_for('books_bp.browse_alphabetical') }}">Books A-Z</a>
+    <a class="btn-nav" href="{{ url_for('books_bp.browse_release_year') }}">Release Year</a>
+    <a class="btn-nav" href="{{ url_for('books_bp.browse_average_rating') }}">Average Rating</a>
+  </div>
+
+  <div id="nav-footer">
+    COMPSCI 235 Software Development Methodologies
+  </div>
+</nav>
